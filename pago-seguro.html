@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pago Seguro - DarkBox España</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #fff;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        header {
+            background: #1a1a1a;
+            color: #fff;
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #fff;
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: #fff;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #4CAF50;
+        }
+
+        .btn-primary {
+            background: #4CAF50;
+            color: #fff;
+            padding: 0.6rem 1.5rem;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            display: inline-block;
+            font-weight: 600;
+            transition: background 0.3s;
+        }
+
+        .btn-primary:hover {
+            background: #45a049;
+        }
+
+        /* Content */
+        .content-section {
+            padding: 3rem 0;
+        }
+
+        .content-section h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: #333;
+        }
+
+        .content-section h2 {
+            font-size: 1.8rem;
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+            color: #333;
+        }
+
+        .content-section h3 {
+            font-size: 1.4rem;
+            margin-top: 1.5rem;
+            margin-bottom: 0.8rem;
+            color: #555;
+        }
+
+        .content-section p {
+            margin-bottom: 1rem;
+            text-align: justify;
+        }
+
+        .content-section ul {
+            margin-left: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .content-section li {
+            margin-bottom: 0.5rem;
+        }
+
+        .last-updated {
+            color: #666;
+            font-style: italic;
+            margin-bottom: 2rem;
+        }
+
+        .legal-links {
+            background: #f8f9fa;
+            padding: 1.5rem;
+            border-radius: 5px;
+            margin-top: 2rem;
+        }
+
+        .legal-links h3 {
+            margin-top: 0;
+        }
+
+        .legal-links ul {
+            list-style: none;
+            margin-left: 0;
+        }
+
+        .legal-links a {
+            color: #4CAF50;
+            text-decoration: none;
+        }
+
+        .legal-links a:hover {
+            text-decoration: underline;
+        }
+
+        .security-features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+
+        .security-card {
+            background: #f8f9fa;
+            padding: 1.5rem;
+            border-radius: 5px;
+            border-left: 4px solid #4CAF50;
+        }
+
+        .security-card h3 {
+            margin-top: 0;
+            color: #333;
+        }
+
+        .highlight-box {
+            background: #e3f2fd;
+            padding: 1.5rem;
+            border-radius: 5px;
+            border-left: 4px solid #2196F3;
+            margin: 1.5rem 0;
+        }
+
+        /* Footer */
+        footer {
+            background: #1a1a1a;
+            color: #fff;
+            padding: 3rem 0 1rem;
+            margin-top: 3rem;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-section h3 {
+            margin-bottom: 1rem;
+            color: #fff;
+        }
+
+        .footer-section ul {
+            list-style: none;
+        }
+
+        .footer-section ul li {
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-section a {
+            color: #ccc;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .footer-section a:hover {
+            color: #4CAF50;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid #333;
+            color: #999;
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .content-section h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav class="container">
+            <a href="index.html" class="logo">DarkBox España</a>
+            <ul class="nav-links">
+                <li><a href="index.html#packs">Packs</a></li>
+                <li><a href="index.html#productos">Productos</a></li>
+                <li><a href="index.html#beneficios">Beneficios</a></li>
+                <li><a href="index.html#faq">FAQ</a></li>
+            </ul>
+            <a href="index.html#packs" class="btn-primary">Ver Packs</a>
+        </nav>
+    </header>
+
+    <!-- Content -->
+    <section class="content-section">
+        <div class="container">
+            <h1>Pago Seguro</h1>
+            <p class="last-updated">Última actualización: Enero 2025</p>
+
+            <p>En DarkBox España, la seguridad de sus transacciones es nuestra máxima prioridad. Utilizamos las más avanzadas tecnologías de seguridad para proteger su información de pago y garantizar transacciones seguras.</p>
+
+            <div class="highlight-box">
+                <h3>Garantía de Seguridad</h3>
+                <p>Todas las transacciones están protegidas mediante cifrado SSL/TLS de 256 bits. Sus datos de pago nunca se almacenan en nuestros servidores y son procesados directamente por nuestros proveedores de pago certificados PCI DSS.</p>
+            </div>
+
+            <h2>1. Métodos de Pago Aceptados</h2>
+            <p>Aceptamos los siguientes métodos de pago seguros:</p>
+
+            <div class="security-features">
+                <div class="security-card">
+                    <h3>Tarjetas de Crédito y Débito</h3>
+                    <p>Aceptamos Visa, Mastercard, American Express y otras tarjetas principales. Todas las transacciones con tarjeta están protegidas por 3D Secure (Verified by Visa, Mastercard SecureCode).</p>
+                </div>
+
+                <div class="security-card">
+                    <h3>PayPal</h3>
+                    <p>Puede pagar de forma segura utilizando su cuenta PayPal. PayPal ofrece protección adicional al comprador y no compartimos sus datos bancarios con nosotros.</p>
+                </div>
+
+                <div class="security-card">
+                    <h3>Transferencia Bancaria</h3>
+                    <p>Realice transferencias bancarias directas. Una vez confirmado el pago, procesaremos su pedido inmediatamente.</p>
+                </div>
+            </div>
+
+            <h2 id="ssl">2. Certificado SSL/TLS</h2>
+            <p>Nuestro sitio web utiliza certificados SSL/TLS (Secure Sockets Layer/Transport Layer Security) para cifrar toda la información transmitida entre su navegador y nuestros servidores.</p>
+
+            <h3>2.1. ¿Qué es SSL/TLS?</h3>
+            <p>SSL/TLS es un protocolo de seguridad que crea un canal cifrado entre su navegador y nuestro servidor. Esto garantiza que:</p>
+            <ul>
+                <li>Toda la información transmitida esté cifrada</li>
+                <li>Sus datos no puedan ser interceptados por terceros</li>
+                <li>La identidad de nuestro sitio web esté verificada</li>
+                <li>La integridad de los datos esté protegida</li>
+            </ul>
+
+            <h3>2.2. Cómo Identificar una Conexión Segura</h3>
+            <p>Puede verificar que está en una conexión segura buscando:</p>
+            <ul>
+                <li>Un candado cerrado en la barra de direcciones de su navegador</li>
+                <li>La URL comienza con "https://" en lugar de "http://"</li>
+                <li>El certificado SSL válido (puede hacer clic en el candado para ver los detalles)</li>
+            </ul>
+
+            <h2>3. Protección de Datos de Pago</h2>
+            <h3>3.1. No Almacenamos Datos de Pago</h3>
+            <p>Para su seguridad, <strong>no almacenamos información de tarjetas de crédito o débito en nuestros servidores</strong>. Toda la información de pago se procesa directamente a través de nuestros proveedores de pago certificados PCI DSS.</p>
+
+            <h3>3.2. Certificación PCI DSS</h3>
+            <p>Nuestros proveedores de pago están certificados según el estándar PCI DSS (Payment Card Industry Data Security Standard), que es el estándar de seguridad más estricto para el procesamiento de pagos con tarjeta.</p>
+
+            <h3>3.3. Cifrado de Datos</h3>
+            <p>Todos los datos sensibles se cifran utilizando algoritmos de cifrado de 256 bits, el mismo nivel de seguridad utilizado por instituciones financieras.</p>
+
+            <h2>4. Autenticación 3D Secure</h2>
+            <p>Para transacciones con tarjeta, utilizamos 3D Secure, un protocolo de autenticación adicional que requiere:</p>
+            <ul>
+                <li><strong>Verified by Visa:</strong> Para tarjetas Visa</li>
+                <li><strong>Mastercard SecureCode:</strong> Para tarjetas Mastercard</li>
+                <li><strong>American Express SafeKey:</strong> Para tarjetas American Express</li>
+            </ul>
+            <p>Este sistema añade una capa adicional de seguridad al requerir un código de verificación adicional que solo usted conoce.</p>
+
+            <h2>5. Protección contra Fraude</h2>
+            <p>Implementamos múltiples sistemas de protección contra fraude:</p>
+            <ul>
+                <li><strong>Verificación de direcciones (AVS):</strong> Verificamos que la dirección de facturación coincida con la registrada en el banco</li>
+                <li><strong>Verificación CVV:</strong> Requerimos el código de seguridad de la tarjeta</li>
+                <li><strong>Monitoreo de transacciones:</strong> Analizamos patrones de compra para detectar actividad sospechosa</li>
+                <li><strong>Límites de transacción:</strong> Implementamos límites para proteger contra transacciones fraudulentas</li>
+            </ul>
+
+            <h2>6. Política de Reembolsos</h2>
+            <p>Si necesita un reembolso, lo procesaremos utilizando el mismo método de pago que utilizó para la compra original. Los reembolsos se procesan en un plazo de 5-14 días laborables después de la aprobación.</p>
+            <p>Para más información sobre reembolsos, consulte nuestra <a href="politica-devoluciones.html">Política de Devoluciones</a>.</p>
+
+            <h2>7. Facturación</h2>
+            <p>Todos los pedidos incluyen una factura detallada que se envía por correo electrónico. La factura incluye:</p>
+            <ul>
+                <li>Información completa del producto</li>
+                <li>Precios desglosados</li>
+                <li>IVA incluido</li>
+                <li>Información de pago</li>
+                <li>Datos de la empresa</li>
+            </ul>
+
+            <h2>8. Qué Hacer si Detecta una Transacción No Autorizada</h2>
+            <p>Si detecta una transacción en su cuenta que no reconoce:</p>
+            <ol>
+                <li><strong>Contacte inmediatamente con su banco o emisor de tarjeta</strong> para bloquear la tarjeta</li>
+                <li>Contacte con nosotros en <a href="mailto:contratos@vvieiraempresarial.com">contratos@vvieiraempresarial.com</a></li>
+                <li>Proporcione el número de pedido y los detalles de la transacción</li>
+                <li>Revisaremos el caso y tomaremos las medidas necesarias</li>
+            </ol>
+
+            <h2>9. Mejores Prácticas de Seguridad</h2>
+            <p>Para mantener sus transacciones seguras, le recomendamos:</p>
+            <ul>
+                <li>Nunca comparta sus datos de tarjeta con terceros</li>
+                <li>Verifique siempre que está en nuestro sitio web oficial antes de ingresar información de pago</li>
+                <li>Mantenga su navegador actualizado</li>
+                <li>Utilice contraseñas seguras para sus cuentas</li>
+                <li>Revise regularmente los extractos de su tarjeta</li>
+                <li>No realice compras desde redes Wi-Fi públicas no seguras</li>
+            </ul>
+
+            <h2>10. Privacidad y Protección de Datos</h2>
+            <p>El tratamiento de sus datos personales se realiza de acuerdo con nuestra <a href="politica-privacidad.html">Política de Privacidad</a> y cumple con el Reglamento General de Protección de Datos (RGPD). Sus datos de pago se procesan únicamente para completar su transacción y no se utilizan para otros fines.</p>
+
+            <h2>11. Contacto</h2>
+            <p>Si tiene preguntas o inquietudes sobre la seguridad de los pagos, puede contactarnos:</p>
+            <ul>
+                <li>Email: <a href="mailto:contratos@vvieiraempresarial.com">contratos@vvieiraempresarial.com</a></li>
+                <li>Dirección: R Des Desembargador Motta, 2311, Batel, Curitiba - PR, 80420-162, Brasil</li>
+            </ul>
+
+            <div class="legal-links">
+                <h3>Documentos Relacionados</h3>
+                <ul>
+                    <li><a href="politica-privacidad.html">Política de Privacidad</a></li>
+                    <li><a href="terminos-condiciones.html">Términos y Condiciones</a></li>
+                    <li><a href="politica-devoluciones.html">Política de Devoluciones</a></li>
+                    <li><a href="rgpd.html">Información RGPD</a></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>DarkBox España</h3>
+                    <p>Tienda online de packs tecnológicos con productos genéricos de calidad. Transparencia y ahorro real sin sorpresas.</p>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Contacto</h3>
+                    <p><strong>J.CAR COMERCIO E LOCACAO DE VEICULOS LTDA</strong></p>
+                    <p>CNPJ: 56.299.830/0001-16</p>
+                    <p>R Des Desembargador Motta, 2311, Batel</p>
+                    <p>Curitiba - PR, 80420-162, Brasil</p>
+                    <p>Email: <a href="mailto:contratos@vvieiraempresarial.com">contratos@vvieiraempresarial.com</a></p>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Legal</h3>
+                    <ul>
+                        <li><a href="politica-privacidad.html">Política de Privacidad</a></li>
+                        <li><a href="terminos-condiciones.html">Términos y Condiciones</a></li>
+                        <li><a href="politica-devoluciones.html">Política de Devoluciones</a></li>
+                        <li><a href="politica-cookies.html">Política de Cookies</a></li>
+                        <li><a href="aviso-legal.html">Aviso Legal</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Seguridad</h3>
+                    <ul>
+                        <li><a href="pago-seguro.html">Pago Seguro</a></li>
+                        <li><a href="rgpd.html">RGPD</a></li>
+                        <li><a href="pago-seguro.html#ssl">SSL</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>© 2025 J.CAR Comercio e Locacao de Veiculos LTDA. Todos los derechos reservados. Tienda online de packs tecnológicos.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
+

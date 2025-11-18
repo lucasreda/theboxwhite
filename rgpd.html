@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Información RGPD - DarkBox España</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #fff;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        header {
+            background: #1a1a1a;
+            color: #fff;
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #fff;
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: #fff;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #4CAF50;
+        }
+
+        .btn-primary {
+            background: #4CAF50;
+            color: #fff;
+            padding: 0.6rem 1.5rem;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            display: inline-block;
+            font-weight: 600;
+            transition: background 0.3s;
+        }
+
+        .btn-primary:hover {
+            background: #45a049;
+        }
+
+        /* Content */
+        .content-section {
+            padding: 3rem 0;
+        }
+
+        .content-section h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: #333;
+        }
+
+        .content-section h2 {
+            font-size: 1.8rem;
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+            color: #333;
+        }
+
+        .content-section h3 {
+            font-size: 1.4rem;
+            margin-top: 1.5rem;
+            margin-bottom: 0.8rem;
+            color: #555;
+        }
+
+        .content-section p {
+            margin-bottom: 1rem;
+            text-align: justify;
+        }
+
+        .content-section ul {
+            margin-left: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .content-section li {
+            margin-bottom: 0.5rem;
+        }
+
+        .last-updated {
+            color: #666;
+            font-style: italic;
+            margin-bottom: 2rem;
+        }
+
+        .legal-links {
+            background: #f8f9fa;
+            padding: 1.5rem;
+            border-radius: 5px;
+            margin-top: 2rem;
+        }
+
+        .legal-links h3 {
+            margin-top: 0;
+        }
+
+        .legal-links ul {
+            list-style: none;
+            margin-left: 0;
+        }
+
+        .legal-links a {
+            color: #4CAF50;
+            text-decoration: none;
+        }
+
+        .legal-links a:hover {
+            text-decoration: underline;
+        }
+
+        .rights-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+
+        .right-card {
+            background: #f8f9fa;
+            padding: 1.5rem;
+            border-radius: 5px;
+            border-left: 4px solid #4CAF50;
+        }
+
+        .right-card h3 {
+            margin-top: 0;
+            color: #333;
+        }
+
+        .highlight-box {
+            background: #e3f2fd;
+            padding: 1.5rem;
+            border-radius: 5px;
+            border-left: 4px solid #2196F3;
+            margin: 1.5rem 0;
+        }
+
+        /* Footer */
+        footer {
+            background: #1a1a1a;
+            color: #fff;
+            padding: 3rem 0 1rem;
+            margin-top: 3rem;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-section h3 {
+            margin-bottom: 1rem;
+            color: #fff;
+        }
+
+        .footer-section ul {
+            list-style: none;
+        }
+
+        .footer-section ul li {
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-section a {
+            color: #ccc;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .footer-section a:hover {
+            color: #4CAF50;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid #333;
+            color: #999;
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .content-section h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav class="container">
+            <a href="index.html" class="logo">DarkBox España</a>
+            <ul class="nav-links">
+                <li><a href="index.html#packs">Packs</a></li>
+                <li><a href="index.html#productos">Productos</a></li>
+                <li><a href="index.html#beneficios">Beneficios</a></li>
+                <li><a href="index.html#faq">FAQ</a></li>
+            </ul>
+            <a href="index.html#packs" class="btn-primary">Ver Packs</a>
+        </nav>
+    </header>
+
+    <!-- Content -->
+    <section class="content-section">
+        <div class="container">
+            <h1>Información sobre RGPD</h1>
+            <p class="last-updated">Última actualización: Enero 2025</p>
+
+            <p>DarkBox España cumple estrictamente con el Reglamento General de Protección de Datos (RGPD) de la Unión Europea. Esta página proporciona información sobre cómo protegemos sus datos personales y sus derechos bajo el RGPD.</p>
+
+            <div class="highlight-box">
+                <h3>¿Qué es el RGPD?</h3>
+                <p>El Reglamento General de Protección de Datos (RGPD) es una normativa europea que entró en vigor el 25 de mayo de 2018. Establece normas estrictas sobre cómo las empresas deben recopilar, procesar y proteger los datos personales de los ciudadanos de la UE.</p>
+            </div>
+
+            <h2>1. Nuestro Compromiso con el RGPD</h2>
+            <p>En DarkBox España, nos comprometemos a:</p>
+            <ul>
+                <li>Procesar sus datos personales de manera legal, justa y transparente</li>
+                <li>Recopilar solo los datos necesarios para los fines especificados</li>
+                <li>Mantener sus datos precisos y actualizados</li>
+                <li>Almacenar sus datos solo durante el tiempo necesario</li>
+                <li>Proteger sus datos mediante medidas técnicas y organizativas apropiadas</li>
+                <li>Respetar y facilitar el ejercicio de sus derechos</li>
+            </ul>
+
+            <h2>2. Responsable del Tratamiento</h2>
+            <p>El responsable del tratamiento de sus datos personales es:</p>
+            <ul>
+                <li><strong>J.CAR COMERCIO E LOCACAO DE VEICULOS LTDA</strong></li>
+                <li>CNPJ: 56.299.830/0001-16</li>
+                <li>Dirección: R Des Desembargador Motta, 2311, Batel, Curitiba - PR, 80420-162, Brasil</li>
+                <li>Email: <a href="mailto:contratos@vvieiraempresarial.com">contratos@vvieiraempresarial.com</a></li>
+            </ul>
+
+            <h2>3. Sus Derechos bajo el RGPD</h2>
+            <p>Como titular de datos personales, usted tiene los siguientes derechos:</p>
+
+            <div class="rights-grid">
+                <div class="right-card">
+                    <h3>Derecho de Acceso</h3>
+                    <p>Tiene derecho a obtener confirmación de si estamos procesando sus datos personales y, en caso afirmativo, acceso a esos datos e información sobre cómo se están utilizando.</p>
+                </div>
+
+                <div class="right-card">
+                    <h3>Derecho de Rectificación</h3>
+                    <p>Tiene derecho a solicitar la corrección de datos inexactos o incompletos. Nos comprometemos a corregir cualquier error en sus datos personales sin demora.</p>
+                </div>
+
+                <div class="right-card">
+                    <h3>Derecho de Supresión ("Derecho al Olvido")</h3>
+                    <p>Tiene derecho a solicitar la eliminación de sus datos personales cuando ya no sean necesarios para los fines para los que fueron recopilados o cuando retire su consentimiento.</p>
+                </div>
+
+                <div class="right-card">
+                    <h3>Derecho de Limitación del Tratamiento</h3>
+                    <p>Tiene derecho a solicitar la limitación del tratamiento de sus datos personales en ciertas circunstancias, por ejemplo, cuando impugne la exactitud de los datos.</p>
+                </div>
+
+                <div class="right-card">
+                    <h3>Derecho de Portabilidad</h3>
+                    <p>Tiene derecho a recibir sus datos personales en un formato estructurado, de uso común y legible por máquina, y a transmitir esos datos a otro responsable del tratamiento.</p>
+                </div>
+
+                <div class="right-card">
+                    <h3>Derecho de Oposición</h3>
+                    <p>Tiene derecho a oponerse al tratamiento de sus datos personales cuando el tratamiento se base en interés legítimo o para fines de marketing directo.</p>
+                </div>
+
+                <div class="right-card">
+                    <h3>Derecho a Retirar el Consentimiento</h3>
+                    <p>Cuando el tratamiento se base en su consentimiento, tiene derecho a retirarlo en cualquier momento sin afectar la licitud del tratamiento basado en el consentimiento antes de su retirada.</p>
+                </div>
+
+                <div class="right-card">
+                    <h3>Derecho a Presentar una Reclamación</h3>
+                    <p>Tiene derecho a presentar una reclamación ante una autoridad de protección de datos si considera que el tratamiento de sus datos personales infringe el RGPD.</p>
+                </div>
+            </div>
+
+            <h2>4. Cómo Ejercer sus Derechos</h2>
+            <p>Para ejercer cualquiera de sus derechos, puede contactarnos:</p>
+            <ul>
+                <li>Email: <a href="mailto:contratos@vvieiraempresarial.com">contratos@vvieiraempresarial.com</a></li>
+                <li>Asunto: "Ejercicio de Derechos RGPD"</li>
+                <li>Incluya su nombre completo y una descripción de su solicitud</li>
+            </ul>
+            <p>Responderemos a su solicitud dentro de un plazo máximo de un mes desde su recepción. En casos complejos, este plazo puede extenderse hasta dos meses adicionales, de lo cual le informaremos.</p>
+
+            <h2>5. Base Legal para el Tratamiento</h2>
+            <p>Procesamos sus datos personales basándonos en las siguientes bases legales del RGPD:</p>
+            <ul>
+                <li><strong>Consentimiento:</strong> Cuando nos ha dado su consentimiento explícito para el tratamiento de sus datos</li>
+                <li><strong>Ejecución de contrato:</strong> Cuando el tratamiento es necesario para ejecutar un contrato o tomar medidas previas a la contratación</li>
+                <li><strong>Obligación legal:</strong> Cuando el tratamiento es necesario para cumplir con una obligación legal</li>
+                <li><strong>Interés legítimo:</strong> Cuando el tratamiento es necesario para nuestros intereses legítimos, siempre que no se anulen sus derechos e intereses fundamentales</li>
+            </ul>
+
+            <h2>6. Transferencias Internacionales</h2>
+            <p>Sus datos personales pueden ser transferidos y almacenados fuera del Espacio Económico Europeo (EEE), específicamente a Brasil, donde se encuentra nuestra empresa matriz.</p>
+            <p>Estas transferencias se realizan con las garantías adecuadas según el RGPD, incluyendo:</p>
+            <ul>
+                <li>Cláusulas contractuales estándar aprobadas por la Comisión Europea</li>
+                <li>Medidas técnicas y organizativas apropiadas para proteger sus datos</li>
+                <li>Cumplimiento de los principios del RGPD independientemente de la ubicación</li>
+            </ul>
+
+            <h2>7. Medidas de Seguridad</h2>
+            <p>Implementamos medidas técnicas y organizativas apropiadas para proteger sus datos personales, incluyendo:</p>
+            <ul>
+                <li>Cifrado de datos en tránsito y en reposo</li>
+                <li>Control de acceso basado en roles</li>
+                <li>Monitoreo regular de sistemas de seguridad</li>
+                <li>Copias de seguridad regulares</li>
+                <li>Formación del personal en protección de datos</li>
+                <li>Evaluaciones regulares de riesgos</li>
+            </ul>
+
+            <h2>8. Retención de Datos</h2>
+            <p>Conservamos sus datos personales solo durante el tiempo necesario para cumplir con los fines para los que fueron recopilados, a menos que la ley requiera o permita un período de retención más largo. En general:</p>
+            <ul>
+                <li>Datos de pedidos: 7 años (obligaciones fiscales y contables)</li>
+                <li>Datos de contacto: Mientras mantenga una relación comercial con nosotros</li>
+                <li>Datos de marketing: Hasta que retire su consentimiento</li>
+                <li>Datos de cookies: Según se especifica en nuestra <a href="politica-cookies.html">Política de Cookies</a></li>
+            </ul>
+
+            <h2>9. Autoridades de Protección de Datos</h2>
+            <p>Si considera que el tratamiento de sus datos personales infringe el RGPD, tiene derecho a presentar una reclamación ante la autoridad de protección de datos de su país. En España, la autoridad competente es:</p>
+            <ul>
+                <li><strong>Agencia Española de Protección de Datos (AEPD)</strong></li>
+                <li>Web: <a href="https://www.aepd.es" target="_blank" rel="noopener">www.aepd.es</a></li>
+                <li>Teléfono: 912 663 517</li>
+            </ul>
+
+            <h2>10. Menores de Edad</h2>
+            <p>Nuestros servicios están dirigidos a personas mayores de 18 años. No recopilamos intencionalmente información personal de menores de edad sin el consentimiento de los padres o tutores legales. Si descubrimos que hemos recopilado información de un menor sin el consentimiento adecuado, tomaremos medidas para eliminar esa información inmediatamente.</p>
+
+            <h2>11. Cambios en el Tratamiento de Datos</h2>
+            <p>Si realizamos cambios significativos en cómo tratamos sus datos personales, le notificaremos mediante:</p>
+            <ul>
+                <li>Actualización de nuestra <a href="politica-privacidad.html">Política de Privacidad</a></li>
+                <li>Notificación por correo electrónico (si es necesario)</li>
+                <li>Aviso destacado en nuestro sitio web</li>
+            </ul>
+
+            <h2>12. Contacto</h2>
+            <p>Para cualquier consulta relacionada con el RGPD o el tratamiento de sus datos personales, puede contactarnos:</p>
+            <ul>
+                <li>Email: <a href="mailto:contratos@vvieiraempresarial.com">contratos@vvieiraempresarial.com</a></li>
+                <li>Dirección: R Des Desembargador Motta, 2311, Batel, Curitiba - PR, 80420-162, Brasil</li>
+                <li>Asunto: "Consulta RGPD"</li>
+            </ul>
+
+            <div class="legal-links">
+                <h3>Documentos Relacionados</h3>
+                <ul>
+                    <li><a href="politica-privacidad.html">Política de Privacidad</a></li>
+                    <li><a href="politica-cookies.html">Política de Cookies</a></li>
+                    <li><a href="terminos-condiciones.html">Términos y Condiciones</a></li>
+                    <li><a href="pago-seguro.html">Pago Seguro</a></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>DarkBox España</h3>
+                    <p>Tienda online de packs tecnológicos con productos genéricos de calidad. Transparencia y ahorro real sin sorpresas.</p>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Contacto</h3>
+                    <p><strong>J.CAR COMERCIO E LOCACAO DE VEICULOS LTDA</strong></p>
+                    <p>CNPJ: 56.299.830/0001-16</p>
+                    <p>R Des Desembargador Motta, 2311, Batel</p>
+                    <p>Curitiba - PR, 80420-162, Brasil</p>
+                    <p>Email: <a href="mailto:contratos@vvieiraempresarial.com">contratos@vvieiraempresarial.com</a></p>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Legal</h3>
+                    <ul>
+                        <li><a href="politica-privacidad.html">Política de Privacidad</a></li>
+                        <li><a href="terminos-condiciones.html">Términos y Condiciones</a></li>
+                        <li><a href="politica-devoluciones.html">Política de Devoluciones</a></li>
+                        <li><a href="politica-cookies.html">Política de Cookies</a></li>
+                        <li><a href="aviso-legal.html">Aviso Legal</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Seguridad</h3>
+                    <ul>
+                        <li><a href="pago-seguro.html">Pago Seguro</a></li>
+                        <li><a href="rgpd.html">RGPD</a></li>
+                        <li><a href="pago-seguro.html#ssl">SSL</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>© 2025 J.CAR Comercio e Locacao de Veiculos LTDA. Todos los derechos reservados. Tienda online de packs tecnológicos.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
+

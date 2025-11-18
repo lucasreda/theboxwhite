@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Política de Cookies - DarkBox España</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #fff;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        header {
+            background: #1a1a1a;
+            color: #fff;
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #fff;
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: #fff;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #4CAF50;
+        }
+
+        .btn-primary {
+            background: #4CAF50;
+            color: #fff;
+            padding: 0.6rem 1.5rem;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            display: inline-block;
+            font-weight: 600;
+            transition: background 0.3s;
+        }
+
+        .btn-primary:hover {
+            background: #45a049;
+        }
+
+        /* Content */
+        .content-section {
+            padding: 3rem 0;
+        }
+
+        .content-section h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: #333;
+        }
+
+        .content-section h2 {
+            font-size: 1.8rem;
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+            color: #333;
+        }
+
+        .content-section h3 {
+            font-size: 1.4rem;
+            margin-top: 1.5rem;
+            margin-bottom: 0.8rem;
+            color: #555;
+        }
+
+        .content-section p {
+            margin-bottom: 1rem;
+            text-align: justify;
+        }
+
+        .content-section ul {
+            margin-left: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .content-section li {
+            margin-bottom: 0.5rem;
+        }
+
+        .last-updated {
+            color: #666;
+            font-style: italic;
+            margin-bottom: 2rem;
+        }
+
+        .legal-links {
+            background: #f8f9fa;
+            padding: 1.5rem;
+            border-radius: 5px;
+            margin-top: 2rem;
+        }
+
+        .legal-links h3 {
+            margin-top: 0;
+        }
+
+        .legal-links ul {
+            list-style: none;
+            margin-left: 0;
+        }
+
+        .legal-links a {
+            color: #4CAF50;
+            text-decoration: none;
+        }
+
+        .legal-links a:hover {
+            text-decoration: underline;
+        }
+
+        .cookie-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1.5rem 0;
+        }
+
+        .cookie-table th,
+        .cookie-table td {
+            padding: 0.8rem;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .cookie-table th {
+            background-color: #f8f9fa;
+            font-weight: bold;
+        }
+
+        .info-box {
+            background: #e3f2fd;
+            padding: 1.5rem;
+            border-radius: 5px;
+            border-left: 4px solid #2196F3;
+            margin: 1.5rem 0;
+        }
+
+        /* Footer */
+        footer {
+            background: #1a1a1a;
+            color: #fff;
+            padding: 3rem 0 1rem;
+            margin-top: 3rem;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-section h3 {
+            margin-bottom: 1rem;
+            color: #fff;
+        }
+
+        .footer-section ul {
+            list-style: none;
+        }
+
+        .footer-section ul li {
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-section a {
+            color: #ccc;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .footer-section a:hover {
+            color: #4CAF50;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid #333;
+            color: #999;
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .content-section h1 {
+                font-size: 2rem;
+            }
+
+            .cookie-table {
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav class="container">
+            <a href="index.html" class="logo">DarkBox España</a>
+            <ul class="nav-links">
+                <li><a href="index.html#packs">Packs</a></li>
+                <li><a href="index.html#productos">Productos</a></li>
+                <li><a href="index.html#beneficios">Beneficios</a></li>
+                <li><a href="index.html#faq">FAQ</a></li>
+            </ul>
+            <a href="index.html#packs" class="btn-primary">Ver Packs</a>
+        </nav>
+    </header>
+
+    <!-- Content -->
+    <section class="content-section">
+        <div class="container">
+            <h1>Política de Cookies</h1>
+            <p class="last-updated">Última actualización: Enero 2025</p>
+
+            <p>Esta Política de Cookies explica qué son las cookies, cómo las utilizamos en nuestro sitio web, qué tipos de cookies utilizamos, qué información recopilamos mediante las cookies y cómo se utiliza esa información. También explica cómo puede controlar las preferencias de cookies.</p>
+
+            <h2>1. ¿Qué son las Cookies?</h2>
+            <p>Las cookies son pequeños archivos de texto que se almacenan en su dispositivo (ordenador, tablet o móvil) cuando visita un sitio web. Las cookies permiten que el sitio web recuerde sus acciones y preferencias durante un período de tiempo, por lo que no tiene que volver a configurarlas cada vez que regresa al sitio o navega de una página a otra.</p>
+
+            <h2>2. ¿Cómo Utilizamos las Cookies?</h2>
+            <p>Utilizamos cookies para:</p>
+            <ul>
+                <li>Garantizar que el sitio web funcione correctamente</li>
+                <li>Recordar sus preferencias y configuraciones</li>
+                <li>Mejorar la seguridad del sitio web</li>
+                <li>Analizar cómo se utiliza nuestro sitio web para mejorarlo</li>
+                <li>Proporcionar funcionalidades de redes sociales</li>
+            </ul>
+
+            <h2>3. Tipos de Cookies que Utilizamos</h2>
+            <p>Utilizamos los siguientes tipos de cookies:</p>
+
+            <h3>3.1. Cookies Estrictamente Necesarias</h3>
+            <p>Estas cookies son esenciales para que pueda navegar por el sitio web y utilizar sus funciones. Sin estas cookies, los servicios que ha solicitado no pueden ser proporcionados. Estas cookies no recopilan información sobre usted que pueda ser utilizada para marketing o recordar dónde ha estado en Internet.</p>
+
+            <h3>3.2. Cookies de Funcionalidad</h3>
+            <p>Estas cookies permiten que el sitio web recuerde las elecciones que hace (como su nombre de usuario, idioma o región) y proporcionan características mejoradas y más personales. Estas cookies también pueden utilizarse para recordar cambios que ha realizado en el tamaño del texto, las fuentes y otras partes de las páginas web que puede personalizar.</p>
+
+            <h3>3.3. Cookies Analíticas</h3>
+            <p>Estas cookies nos ayudan a entender cómo los visitantes interactúan con nuestro sitio web recopilando y reportando información de forma anónima. Esto nos ayuda a mejorar el funcionamiento del sitio web.</p>
+
+            <h3>3.4. Cookies de Marketing</h3>
+            <p>Estas cookies se utilizan para hacer que los mensajes publicitarios sean más relevantes para usted y sus intereses. También se utilizan para limitar el número de veces que ve un anuncio y ayudar a medir la efectividad de las campañas publicitarias.</p>
+
+            <h2>4. Cookies Específicas que Utilizamos</h2>
+            <p>A continuación se detallan las cookies específicas que utilizamos en nuestro sitio web:</p>
+
+            <table class="cookie-table">
+                <thead>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Tipo</th>
+                        <th>Propósito</th>
+                        <th>Duración</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>session_id</td>
+                        <td>Estrictamente Necesaria</td>
+                        <td>Mantener la sesión del usuario durante la navegación</td>
+                        <td>Sesión</td>
+                    </tr>
+                    <tr>
+                        <td>cart_items</td>
+                        <td>Funcionalidad</td>
+                        <td>Recordar los productos en el carrito de compra</td>
+                        <td>30 días</td>
+                    </tr>
+                    <tr>
+                        <td>language_preference</td>
+                        <td>Funcionalidad</td>
+                        <td>Recordar el idioma preferido del usuario</td>
+                        <td>1 año</td>
+                    </tr>
+                    <tr>
+                        <td>_ga</td>
+                        <td>Analítica</td>
+                        <td>Distinguir usuarios únicos (Google Analytics)</td>
+                        <td>2 años</td>
+                    </tr>
+                    <tr>
+                        <td>_gid</td>
+                        <td>Analítica</td>
+                        <td>Distinguir usuarios únicos (Google Analytics)</td>
+                        <td>24 horas</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h2>5. Cookies de Terceros</h2>
+            <p>Algunas cookies son colocadas por servicios de terceros que aparecen en nuestras páginas. Estos terceros pueden incluir:</p>
+            <ul>
+                <li><strong>Google Analytics:</strong> Para analizar el uso del sitio web</li>
+                <li><strong>Proveedores de pago:</strong> Para procesar pagos de forma segura</li>
+                <li><strong>Redes sociales:</strong> Si compartimos contenido en redes sociales</li>
+            </ul>
+            <p>No controlamos las cookies de terceros. Le recomendamos que consulte los sitios web de estos terceros para obtener más información sobre sus cookies.</p>
+
+            <h2>6. Gestión de Cookies</h2>
+            <p>Puede controlar y/o eliminar las cookies como desee. Puede eliminar todas las cookies que ya están en su ordenador y puede configurar la mayoría de los navegadores para evitar que se coloquen. Sin embargo, si hace esto, es posible que tenga que ajustar manualmente algunas preferencias cada vez que visite un sitio y que algunos servicios y funcionalidades no funcionen.</p>
+
+            <h3>6.1. Configuración del Navegador</h3>
+            <p>La mayoría de los navegadores web permiten cierto control de las cookies a través de la configuración del navegador. Para obtener más información sobre cómo gestionar las cookies en los navegadores más populares, visite:</p>
+            <ul>
+                <li><strong>Chrome:</strong> Configuración > Privacidad y seguridad > Cookies</li>
+                <li><strong>Firefox:</strong> Opciones > Privacidad y seguridad > Cookies</li>
+                <li><strong>Safari:</strong> Preferencias > Privacidad > Cookies</li>
+                <li><strong>Edge:</strong> Configuración > Privacidad > Cookies</li>
+            </ul>
+
+            <h3>6.2. Herramientas de Gestión de Cookies</h3>
+            <p>También puede utilizar herramientas de gestión de cookies de terceros para controlar las cookies en múltiples sitios web.</p>
+
+            <div class="info-box">
+                <h3>Importante</h3>
+                <p>Si desactiva las cookies estrictamente necesarias, es posible que algunas partes de nuestro sitio web no funcionen correctamente. Por ejemplo, puede que no pueda agregar productos al carrito de compra o completar una compra.</p>
+            </div>
+
+            <h2>7. Cookies y Dispositivos Móviles</h2>
+            <p>Si accede a nuestro sitio web desde un dispositivo móvil, las cookies funcionan de manera similar. Puede gestionar las cookies a través de la configuración de su navegador móvil o mediante aplicaciones de gestión de privacidad.</p>
+
+            <h2>8. Actualizaciones de esta Política</h2>
+            <p>Podemos actualizar esta Política de Cookies ocasionalmente para reflejar cambios en las cookies que utilizamos o por otras razones operativas, legales o regulatorias. Le recomendamos que revise esta política periódicamente para mantenerse informado sobre nuestro uso de cookies.</p>
+
+            <h2>9. Más Información</h2>
+            <p>Para obtener más información sobre las cookies y cómo funcionan, puede visitar:</p>
+            <ul>
+                <li><a href="https://www.allaboutcookies.org" target="_blank" rel="noopener">www.allaboutcookies.org</a></li>
+                <li><a href="https://www.youronlinechoices.eu" target="_blank" rel="noopener">www.youronlinechoices.eu</a></li>
+            </ul>
+
+            <h2>10. Contacto</h2>
+            <p>Si tiene preguntas sobre nuestra Política de Cookies, puede contactarnos:</p>
+            <ul>
+                <li>Email: <a href="mailto:contratos@vvieiraempresarial.com">contratos@vvieiraempresarial.com</a></li>
+                <li>Dirección: R Des Desembargador Motta, 2311, Batel, Curitiba - PR, 80420-162, Brasil</li>
+            </ul>
+
+            <div class="legal-links">
+                <h3>Documentos Relacionados</h3>
+                <ul>
+                    <li><a href="politica-privacidad.html">Política de Privacidad</a></li>
+                    <li><a href="terminos-condiciones.html">Términos y Condiciones</a></li>
+                    <li><a href="aviso-legal.html">Aviso Legal</a></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>DarkBox España</h3>
+                    <p>Tienda online de packs tecnológicos con productos genéricos de calidad. Transparencia y ahorro real sin sorpresas.</p>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Contacto</h3>
+                    <p><strong>J.CAR COMERCIO E LOCACAO DE VEICULOS LTDA</strong></p>
+                    <p>CNPJ: 56.299.830/0001-16</p>
+                    <p>R Des Desembargador Motta, 2311, Batel</p>
+                    <p>Curitiba - PR, 80420-162, Brasil</p>
+                    <p>Email: <a href="mailto:contratos@vvieiraempresarial.com">contratos@vvieiraempresarial.com</a></p>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Legal</h3>
+                    <ul>
+                        <li><a href="politica-privacidad.html">Política de Privacidad</a></li>
+                        <li><a href="terminos-condiciones.html">Términos y Condiciones</a></li>
+                        <li><a href="politica-devoluciones.html">Política de Devoluciones</a></li>
+                        <li><a href="politica-cookies.html">Política de Cookies</a></li>
+                        <li><a href="aviso-legal.html">Aviso Legal</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Seguridad</h3>
+                    <ul>
+                        <li><a href="pago-seguro.html">Pago Seguro</a></li>
+                        <li><a href="rgpd.html">RGPD</a></li>
+                        <li><a href="pago-seguro.html#ssl">SSL</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>© 2025 J.CAR Comercio e Locacao de Veiculos LTDA. Todos los derechos reservados. Tienda online de packs tecnológicos.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
+
