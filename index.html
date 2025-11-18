@@ -1,0 +1,942 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DarkBox España - Packs Tecnológicos con Ahorro Real</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #fff;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        header {
+            background: #1a1a1a;
+            color: #fff;
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #fff;
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: #fff;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #4CAF50;
+        }
+
+        .btn-primary {
+            background: #4CAF50;
+            color: #fff;
+            padding: 0.6rem 1.5rem;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            display: inline-block;
+            font-weight: 600;
+            transition: background 0.3s;
+        }
+
+        .btn-primary:hover {
+            background: #45a049;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #fff;
+            padding: 4rem 0;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: #fff;
+            padding: 0.6rem 1.5rem;
+            border: 2px solid #fff;
+            border-radius: 5px;
+            text-decoration: none;
+            display: inline-block;
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+
+        .btn-secondary:hover {
+            background: #fff;
+            color: #667eea;
+        }
+
+        /* Features */
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            padding: 3rem 0;
+            background: #f8f9fa;
+        }
+
+        .feature {
+            text-align: center;
+            padding: 1.5rem;
+        }
+
+        .feature-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .feature h3 {
+            margin-bottom: 0.5rem;
+            color: #333;
+        }
+
+        /* Product Section */
+        .product-section {
+            padding: 4rem 0;
+        }
+
+        .product-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .product-header h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .product-card {
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            padding: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .product-title {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            color: #333;
+        }
+
+        .product-subtitle {
+            color: #666;
+            margin-bottom: 2rem;
+        }
+
+        .product-items {
+            list-style: none;
+            margin-bottom: 2rem;
+        }
+
+        .product-items li {
+            padding: 0.5rem 0;
+            border-bottom: 1px solid #eee;
+        }
+
+        .product-items li:last-child {
+            border-bottom: none;
+        }
+
+        .price-section {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+            flex-wrap: wrap;
+        }
+
+        .price-current {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #4CAF50;
+        }
+
+        .price-old {
+            font-size: 1.2rem;
+            color: #999;
+            text-decoration: line-through;
+        }
+
+        .discount-badge {
+            background: #ff4444;
+            color: #fff;
+            padding: 0.3rem 0.8rem;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+
+        .product-description {
+            background: #f8f9fa;
+            padding: 1.5rem;
+            border-radius: 5px;
+            margin-bottom: 2rem;
+        }
+
+        .why-cheaper {
+            background: #e3f2fd;
+            padding: 1.5rem;
+            border-radius: 5px;
+            margin-bottom: 2rem;
+            border-left: 4px solid #2196F3;
+        }
+
+        .breakdown {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        .breakdown-item {
+            text-align: center;
+            padding: 1rem;
+            background: #f8f9fa;
+            border-radius: 5px;
+        }
+
+        .breakdown-value {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #4CAF50;
+        }
+
+        .for-who {
+            background: #fff3e0;
+            padding: 1.5rem;
+            border-radius: 5px;
+            margin-bottom: 2rem;
+        }
+
+        .for-who ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .for-who li {
+            padding: 0.5rem 0;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+
+        .for-who li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #4CAF50;
+            font-weight: bold;
+        }
+
+        /* Product Details */
+        .product-details {
+            padding: 4rem 0;
+            background: #f8f9fa;
+        }
+
+        .product-details h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+        }
+
+        .detail-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .detail-card {
+            background: #fff;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .detail-card h3 {
+            color: #333;
+            margin-bottom: 1rem;
+        }
+
+        .detail-price {
+            color: #666;
+            font-weight: bold;
+            margin-bottom: 1rem;
+        }
+
+        .detail-card ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .detail-card li {
+            padding: 0.3rem 0;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+
+        .detail-card li:before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            color: #4CAF50;
+        }
+
+        /* Why Buy Section */
+        .why-buy {
+            padding: 4rem 0;
+        }
+
+        .why-buy h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+        }
+
+        .why-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .why-card {
+            padding: 2rem;
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .why-card h3 {
+            color: #333;
+            margin-bottom: 1rem;
+        }
+
+        /* Other Packs */
+        .other-packs {
+            padding: 4rem 0;
+            background: #f8f9fa;
+        }
+
+        .other-packs h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+        }
+
+        .packs-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .pack-card {
+            background: #fff;
+            border-radius: 10px;
+            padding: 2rem;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        .pack-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: #333;
+        }
+
+        .pack-price {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .pack-items {
+            list-style: none;
+            margin-bottom: 1rem;
+        }
+
+        .pack-items li {
+            padding: 0.3rem 0;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+
+        .pack-items li:before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            color: #4CAF50;
+        }
+
+        /* FAQ */
+        .faq {
+            padding: 4rem 0;
+        }
+
+        .faq h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+        }
+
+        .faq-list {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            background: #fff;
+            padding: 1.5rem;
+            margin-bottom: 1rem;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .faq-item h3 {
+            color: #333;
+            margin-bottom: 0.5rem;
+        }
+
+        /* CTA Section */
+        .cta-section {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #fff;
+            padding: 4rem 0;
+            text-align: center;
+        }
+
+        .cta-section h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .cta-section p {
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+        }
+
+        /* Footer */
+        footer {
+            background: #1a1a1a;
+            color: #fff;
+            padding: 3rem 0 1rem;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-section h3 {
+            margin-bottom: 1rem;
+            color: #fff;
+        }
+
+        .footer-section ul {
+            list-style: none;
+        }
+
+        .footer-section ul li {
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-section a {
+            color: #ccc;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .footer-section a:hover {
+            color: #4CAF50;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid #333;
+            color: #999;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .hero p {
+                font-size: 1rem;
+            }
+
+            .product-title {
+                font-size: 1.5rem;
+            }
+
+            .price-section {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav class="container">
+            <a href="#" class="logo">DarkBox España</a>
+            <ul class="nav-links">
+                <li><a href="#packs">Packs</a></li>
+                <li><a href="#productos">Productos</a></li>
+                <li><a href="#beneficios">Beneficios</a></li>
+                <li><a href="#faq">FAQ</a></li>
+            </ul>
+            <a href="#packs" class="btn-primary">Ver Packs</a>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1>Productos de Calidad Certificada CE</h1>
+            <p>Packs Tecnológicos con Ahorro Real</p>
+            <p>Accesorios tecnológicos útiles y de calidad sin marcas comerciales. Ahorra hasta un 44% comprando nuestros packs completos. Envío a toda España en 5-7 días.</p>
+            <div class="hero-buttons">
+                <a href="#productos" class="btn-primary">Explorar Productos</a>
+                <a href="#beneficios" class="btn-secondary">Ver Beneficios</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features -->
+    <section class="features">
+        <div class="container">
+            <div class="feature">
+                <div class="feature-icon">🚚</div>
+                <h3>Envío 5-7 días</h3>
+                <p>Entrega rápida y segura</p>
+            </div>
+            <div class="feature">
+                <div class="feature-icon">🛡️</div>
+                <h3>Garantía 2 años CE</h3>
+                <p>Protección garantizada</p>
+            </div>
+            <div class="feature">
+                <div class="feature-icon">↩️</div>
+                <h3>Devolución 14 días</h3>
+                <p>Sin compromiso</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Product Section -->
+    <section id="packs" class="product-section">
+        <div class="container">
+            <div class="product-header">
+                <h2>Pack Esencial Tech</h2>
+                <p class="product-subtitle">5 accesorios útiles para tu día a día</p>
+            </div>
+
+            <div class="product-card">
+                <ul class="product-items">
+                    <li>Auriculares Bluetooth TWS</li>
+                    <li>Cable USB-C reforzado 2m</li>
+                    <li>Protector pantalla vidrio</li>
+                    <li>Soporte móvil ajustable</li>
+                    <li>Power Bank 10.000mAh</li>
+                </ul>
+
+                <div class="price-section">
+                    <span class="price-current">€49,90</span>
+                    <span class="price-old">€89,70</span>
+                    <span class="discount-badge">-44%</span>
+                </div>
+
+                <a href="#" class="btn-primary" style="width: 100%; text-align: center; display: block; margin-bottom: 2rem;">Añadir al carro</a>
+
+                <div class="product-description">
+                    <h3>Pack Esencial Tech - €49,90</h3>
+                    <p>Incluye 5 accesorios tecnológicos genéricos sin marca comercial. Son productos de calidad certificada CE, perfectos para el uso diario. Al comprar el pack completo, ahorras €39,80 (44%) en comparación con comprar cada producto individualmente.</p>
+                </div>
+
+                <div class="why-cheaper">
+                    <h3>¿Por qué es más barato?</h3>
+                    <p>Ofrecemos productos genéricos sin marca comercial, lo que nos permite reducir costes de marketing y distribución. Son accesorios de calidad fabricados con los mismos estándares técnicos, pero sin el precio premium de las marcas conocidas.</p>
+                </div>
+
+                <div class="breakdown">
+                    <div class="breakdown-item">
+                        <div class="breakdown-value">5</div>
+                        <div>productos incluidos</div>
+                    </div>
+                    <div class="breakdown-item">
+                        <div class="breakdown-value">€89,70</div>
+                        <div>Valor individual total</div>
+                    </div>
+                    <div class="breakdown-item">
+                        <div class="breakdown-value">€49,90</div>
+                        <div>Precio del pack</div>
+                    </div>
+                    <div class="breakdown-item">
+                        <div class="breakdown-value">€39,80</div>
+                        <div>Ahorro real</div>
+                    </div>
+                </div>
+
+                <div class="for-who">
+                    <h3>¿Para quién es útil?</h3>
+                    <ul>
+                        <li>Estudiantes que necesitan accesorios básicos</li>
+                        <li>Personas que buscan calidad sin pagar por marcas</li>
+                        <li>Regalos prácticos y económicos</li>
+                        <li>Completar tu colección de accesorios</li>
+                    </ul>
+                </div>
+
+                <a href="#" class="btn-primary" style="width: 100%; text-align: center; display: block;">Añadir Pack al Carro - €49,90</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Product Details -->
+    <section id="productos" class="product-details">
+        <div class="container">
+            <h2>Qué Incluye el Pack</h2>
+            <p style="text-align: center; margin-bottom: 3rem; color: #666;">Desglose detallado de los 5 productos incluidos en el Pack Esencial Tech</p>
+
+            <div class="detail-grid">
+                <div class="detail-card">
+                    <h3>Auriculares Bluetooth TWS</h3>
+                    <div class="detail-price">Valor individual: €24,90</div>
+                    <ul>
+                        <li>Bluetooth 5.0 con alcance de 10 metros</li>
+                        <li>Autonomía de hasta 4 horas</li>
+                        <li>Estuche de carga incluido</li>
+                        <li>Compatibles con iOS y Android</li>
+                        <li>Producto genérico sin marca</li>
+                    </ul>
+                </div>
+
+                <div class="detail-card">
+                    <h3>Cable USB-C Reforzado 2m</h3>
+                    <div class="detail-price">Valor individual: €19,90</div>
+                    <ul>
+                        <li>Longitud extra de 2 metros</li>
+                        <li>Reforzado con nylon trenzado</li>
+                        <li>Carga rápida hasta 3A</li>
+                        <li>Transferencia de datos USB 2.0</li>
+                        <li>Compatible con dispositivos USB-C</li>
+                    </ul>
+                </div>
+
+                <div class="detail-card">
+                    <h3>Protector Pantalla Vidrio</h3>
+                    <div class="detail-price">Valor individual: €14,90</div>
+                    <ul>
+                        <li>Vidrio templado 9H de dureza</li>
+                        <li>Transparencia del 99%</li>
+                        <li>Instalación fácil sin burbujas</li>
+                        <li>Protección contra arañazos y caídas</li>
+                        <li>Compatible con pantallas de 6-6.5"</li>
+                    </ul>
+                </div>
+
+                <div class="detail-card">
+                    <h3>Soporte Móvil Ajustable</h3>
+                    <div class="detail-price">Valor individual: €15,90</div>
+                    <ul>
+                        <li>Ajustable a cualquier ángulo</li>
+                        <li>Base antideslizante de silicona</li>
+                        <li>Compatible con móviles de 4-7"</li>
+                        <li>Ideal para escritorio o mesa</li>
+                        <li>Material plástico resistente</li>
+                    </ul>
+                </div>
+
+                <div class="detail-card">
+                    <h3>Power Bank 10.000mAh</h3>
+                    <div class="detail-price">Valor individual: €24,10</div>
+                    <ul>
+                        <li>Capacidad de 10.000mAh</li>
+                        <li>Carga completa en 3-4 horas</li>
+                        <li>2 puertos USB de salida</li>
+                        <li>Indicador LED de batería</li>
+                        <li>Protección contra sobrecarga</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Buy Section -->
+    <section id="beneficios" class="why-buy">
+        <div class="container">
+            <h2>Por Qué Comprar en DarkBox</h2>
+            <p style="text-align: center; margin-bottom: 3rem; color: #666;">Transparencia, calidad y garantías que protegen tu compra</p>
+
+            <div class="why-grid">
+                <div class="why-card">
+                    <h3>Transparencia Total</h3>
+                    <p>Sabes exactamente qué recibes. Sin sorpresas, sin productos aleatorios. Todo está especificado claramente antes de comprar.</p>
+                </div>
+
+                <div class="why-card">
+                    <h3>Precio Justo</h3>
+                    <p>Sin marcas = mejor precio. Productos genéricos de calidad certificada CE a precios honestos. Ahorra hasta un 44%.</p>
+                </div>
+
+                <div class="why-card">
+                    <h3>Envío Fiable</h3>
+                    <p>Envío a península en 5-7 días laborables. Seguimiento incluido. Sin costes ocultos, IVA incluido en el precio.</p>
+                </div>
+
+                <div class="why-card">
+                    <h3>Garantía Legal</h3>
+                    <p>2 años de garantía CE según normativa europea. Derecho de devolución de 14 días según ley de consumidores.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Other Packs -->
+    <section class="other-packs">
+        <div class="container">
+            <h2>Otros Packs Disponibles</h2>
+            <p style="text-align: center; margin-bottom: 3rem; color: #666;">Descubre nuestros otros packs temáticos con productos genéricos de calidad</p>
+
+            <div class="packs-grid">
+                <div class="pack-card">
+                    <h3>Pack Gaming Basic</h3>
+                    <div class="pack-price">
+                        <span class="price-current">€59,90</span>
+                        <span class="price-old">€109,50</span>
+                        <span class="discount-badge">-45%</span>
+                    </div>
+                    <p style="margin-bottom: 1rem;">5 accesorios para mejorar tu experiencia gaming</p>
+                    <ul class="pack-items">
+                        <li>Ratón gaming óptico 3200 DPI</li>
+                        <li>Alfombrilla gaming XXL</li>
+                        <li>Auriculares gaming con micrófono</li>
+                        <li>Hub USB 4 puertos</li>
+                        <li>Cable HDMI 2.0 de 2m</li>
+                    </ul>
+                    <a href="#" class="btn-primary" style="width: 100%; text-align: center; display: block;">Ver Pack Gaming</a>
+                </div>
+
+                <div class="pack-card">
+                    <h3>Pack Fitness Tech</h3>
+                    <div class="pack-price">
+                        <span class="price-current">€69,90</span>
+                        <span class="price-old">€124,75</span>
+                        <span class="discount-badge">-44%</span>
+                    </div>
+                    <p style="margin-bottom: 1rem;">5 gadgets tecnológicos para tu rutina deportiva</p>
+                    <ul class="pack-items">
+                        <li>Pulsera de actividad con monitor</li>
+                        <li>Auriculares deportivos resistentes</li>
+                        <li>Brazalete para móvil running</li>
+                        <li>Botella inteligente con sensor</li>
+                        <li>Báscula digital de precisión</li>
+                    </ul>
+                    <a href="#" class="btn-primary" style="width: 100%; text-align: center; display: block;">Ver Pack Fitness</a>
+                </div>
+
+                <div class="pack-card">
+                    <h3>Pack Home Office</h3>
+                    <div class="pack-price">
+                        <span class="price-current">€79,90</span>
+                        <span class="price-old">€139,50</span>
+                        <span class="discount-badge">-43%</span>
+                    </div>
+                    <p style="margin-bottom: 1rem;">5 accesorios esenciales para trabajar desde casa</p>
+                    <ul class="pack-items">
+                        <li>Webcam HD 1080p con micrófono</li>
+                        <li>Teclado inalámbrico compacto</li>
+                        <li>Ratón ergonómico Bluetooth</li>
+                        <li>Soporte portátil ajustable</li>
+                        <li>Lámpara LED escritorio USB</li>
+                    </ul>
+                    <a href="#" class="btn-primary" style="width: 100%; text-align: center; display: block;">Ver Pack Home Office</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq" class="faq">
+        <div class="container">
+            <h2>Preguntas Frecuentes</h2>
+            <p style="text-align: center; margin-bottom: 3rem; color: #666;">Respuestas claras a tus dudas más comunes</p>
+
+            <div class="faq-list">
+                <div class="faq-item">
+                    <h3>¿Son productos de marca?</h3>
+                    <p>No, ofrecemos productos genéricos sin marca comercial. Son productos de calidad certificada CE fabricados con los mismos estándares técnicos que las marcas conocidas, pero sin el precio premium.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h3>¿Qué incluye exactamente cada pack?</h3>
+                    <p>Cada pack incluye exactamente los productos especificados en la descripción. No hay sorpresas ni productos aleatorios. Todo está claramente detallado antes de comprar.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h3>¿Cuánto tarda el envío?</h3>
+                    <p>El envío a península tarda entre 5-7 días laborables. Incluimos seguimiento para que puedas rastrear tu pedido en todo momento.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h3>¿Puedo devolver los productos?</h3>
+                    <p>Sí, tienes derecho a devolución durante 14 días según la ley de consumidores europea. Los productos deben estar en su estado original.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h3>¿Tienen garantía los productos?</h3>
+                    <p>Sí, todos los productos tienen garantía de 2 años CE según la normativa europea. Esta garantía cubre defectos de fabricación y funcionamiento.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h3>¿Qué formas de pago aceptáis?</h3>
+                    <p>Aceptamos tarjetas de crédito/débito, PayPal y transferencia bancaria. Todos los pagos son seguros y encriptados.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h3>¿El IVA está incluido en el precio?</h3>
+                    <p>Sí, todos los precios mostrados incluyen el IVA. No hay costes ocultos ni sorpresas en el precio final.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h3>¿Tenéis tienda física?</h3>
+                    <p>No, somos una tienda online exclusivamente. Esto nos permite mantener precios más competitivos al reducir costes de distribución.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h3>¿Ofrecéis factura?</h3>
+                    <p>Sí, proporcionamos factura con todos los pedidos. La factura se envía por email junto con la confirmación del pedido.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h3>¿Los productos son compatibles con mi dispositivo?</h3>
+                    <p>Los productos son compatibles con la mayoría de dispositivos estándar. Cada producto especifica su compatibilidad en la descripción detallada.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <h2>Comienza a Ahorrar Hoy</h2>
+            <p>Packs tecnológicos transparentes con productos de calidad certificada. Sin sorpresas, sin marcas infladas. Solo ahorro real.</p>
+            <a href="#packs" class="btn-secondary">Ver Todos los Packs</a>
+            <p style="margin-top: 2rem; font-size: 0.9rem; opacity: 0.9;">Envío 5-7 días · Devolución 14 días · Garantía 2 años CE</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>DarkBox España</h3>
+                    <p>Tienda online de packs tecnológicos con productos genéricos de calidad. Transparencia y ahorro real sin sorpresas.</p>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Contacto</h3>
+                    <p><strong>J.CAR COMERCIO E LOCACAO DE VEICULOS LTDA</strong></p>
+                    <p>CNPJ: 56.299.830/0001-16</p>
+                    <p>R Des Desembargador Motta, 2311, Batel</p>
+                    <p>Curitiba - PR, 80420-162, Brasil</p>
+                    <p>Email: <a href="mailto:contratos@vvieiraempresarial.com">contratos@vvieiraempresarial.com</a></p>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Legal</h3>
+                    <ul>
+                        <li><a href="#">Política de Privacidad</a></li>
+                        <li><a href="#">Términos y Condiciones</a></li>
+                        <li><a href="#">Política de Devoluciones</a></li>
+                        <li><a href="#">Política de Cookies</a></li>
+                        <li><a href="#">Aviso Legal</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Seguridad</h3>
+                    <ul>
+                        <li><a href="#">Pago Seguro</a></li>
+                        <li><a href="#">RGPD</a></li>
+                        <li><a href="#">SSL</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>© 2025 J.CAR Comercio e Locacao de Veiculos LTDA. Todos los derechos reservados. Tienda online de packs tecnológicos.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
+

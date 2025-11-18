@@ -1,0 +1,13 @@
+{
+  "name": "landingespana",
+  "version": "1.0.0",
+  "description": "Landing page DarkBox España",
+  "scripts": {
+    "start": "npx http-server . -p 8000 -o",
+    "dev": "npx http-server . -p 8000 -o -c-1"
+  },
+  "keywords": ["landing-page", "html"],
+  "author": "",
+  "license": "ISC"
+}
+
